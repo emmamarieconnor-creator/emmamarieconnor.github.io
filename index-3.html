@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emma Connor</title>
+<meta name="description" content="Emma Connor: MSc People Analytics and Human-Centric Management at UCL; BSc Psychology, First Class Honours, Durham University. CV and data visualisation portfolio.">
+<style>
+  :root {
+    --blue: #1b2f5e;        /* dark blue */
+    --blue-dark: #13224a;
+    --blue-soft: #dcecfb;   /* light blue */
+    --lilac: #a98fd9;       /* lilac */
+    --lilac-soft: #efe8fa;
+    --lilac-text: #553a86;
+    --text: #1f2933;
+    --muted: #4a5668;
+    --line: #d6e2ef;
+    --bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+  }
+  a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover, a:focus { color: var(--lilac-text); }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+
+  /* Menu */
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--blue);
+    border-bottom: 4px solid var(--lilac);
+  }
+  nav ul {
+    list-style: none; margin: 0 auto; max-width: 860px;
+    padding: 12px 20px; display: flex; flex-wrap: wrap; gap: 6px 22px;
+  }
+  nav a { color: #fff; font-weight: 600; font-size: 16px; }
+  nav a:hover, nav a:focus { color: #cfe4fa; }
+
+  /* Header */
+  header.hero { background: var(--blue-soft); padding: 52px 0; }
+  .hero .wrap { display: flex; gap: 36px; align-items: center; flex-wrap: wrap; }
+  .portrait {
+    width: 180px; height: 180px; max-width: 100%;
+    border-radius: 50%; object-fit: cover;
+    border: 5px solid var(--lilac); background: #fff; flex-shrink: 0;
+  }
+  .hero h1 { margin: 0; font-size: 2.6rem; color: var(--blue-dark); line-height: 1.15; }
+  .hero .headline { margin: 10px 0 6px; font-size: 1.15rem; }
+  .hero .facts { margin: 0; color: var(--muted); font-size: 1rem; }
+
+  /* Sections */
+  section { padding: 50px 0; border-bottom: 1px solid var(--line); }
+  h2 {
+    margin: 0 0 24px; font-size: 1.7rem; color: var(--blue);
+    display: inline-block; border-bottom: 4px solid var(--lilac); padding-bottom: 4px;
+  }
+  h3 { margin: 0; font-size: 1.15rem; color: var(--blue-dark); }
+  h4 { margin: 34px 0 16px; font-size: 1.25rem; color: var(--blue); }
+  h4:first-of-type { margin-top: 0; }
+
+  .placeholder {
+    background: var(--lilac-soft); border: 1px dashed var(--lilac);
+    color: var(--lilac-text); padding: 1px 6px; border-radius: 4px;
+    font-weight: 600;
+  }
+
+  /* CV timeline */
+  .item { margin-bottom: 26px; padding-left: 18px; border-left: 3px solid var(--blue-soft); }
+  .item:last-child { margin-bottom: 0; }
+  .meta { color: var(--muted); font-size: 0.97rem; margin: 2px 0 6px; }
+  .date {
+    display: inline-block; background: var(--lilac-soft); color: var(--lilac-text);
+    font-weight: 700; font-size: 0.88rem; padding: 1px 10px; border-radius: 20px;
+  }
+  .item ul { margin: 6px 0 0; padding-left: 20px; }
+  .item li { margin-bottom: 4px; }
+  .note { margin-top: 26px; color: var(--muted); font-style: italic; }
+
+  /* Portfolio cards */
+  .cards { display: grid; gap: 22px; }
+  .card {
+    border: 1px solid var(--line); border-top: 5px solid var(--blue);
+    border-radius: 8px; padding: 20px; background: #fff;
+  }
+  .card p { margin: 8px 0; }
+  .card .label { font-weight: 700; color: var(--blue-dark); }
+  .card img { display: block; margin: 14px 0; border: 1px solid var(--line); border-radius: 6px; }
+  .coming { padding: 34px 16px; text-align: center; background: var(--blue-soft); border-radius: 6px; font-weight: 600; margin: 14px 0; }
+  .small { font-size: 0.93rem; color: var(--muted); }
+
+  footer { background: var(--blue); color: #fff; padding: 30px 0; border-top: 4px solid var(--lilac); }
+  footer p { margin: 4px 0; }
+
+  @media (max-width: 600px) {
+    body { font-size: 16px; }
+    .wrap, nav ul { padding-left: 16px; padding-right: 16px; }
+    header.hero { padding: 36px 0; }
+    .hero .wrap { flex-direction: column; text-align: center; }
+    .hero h1 { font-size: 2.1rem; }
+    section { padding: 40px 0; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Main menu">
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- 1) Header: name, headline, portrait -->
+<header class="hero">
+  <div class="wrap">
+    <img class="portrait" src="profile.jpg" alt="Portrait of Emma Connor">
+    <div>
+      <h1>Emma Connor</h1>
+      <p class="headline"><span class="placeholder">[PLACEHOLDER: one-sentence headline from bio.txt]</span></p>
+      <p class="facts">MSc People Analytics and Human-Centric Management, University College London<br>
+        BSc Psychology, First Class Honours, Durham University</p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- 2) About -->
+<section id="about">
+  <div class="wrap">
+    <h2>About</h2>
+    <p><span class="placeholder">[PLACEHOLDER: short bio from bio.txt]</span></p>
+  </div>
+</section>
+
+<!-- 3) CV -->
+<section id="cv">
+  <div class="wrap">
+    <h2>CV</h2>
+
+    <h4>Education</h4>
+
+    <div class="item">
+      <h3>MSc People Analytics and Human-Centric Management</h3>
+      <p class="meta">University College London &nbsp;<span class="date">2026 – 2027</span></p>
+      <ul>
+        <li>Distinction: predicted</li>
+        <li>Member of UCL Netball Society</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>BSc Psychology</h3>
+      <p class="meta">Durham University &nbsp;<span class="date">2023 – 2026</span></p>
+      <ul>
+        <li><strong>First Class Honours achieved</strong></li>
+        <li>Dissertation (72%): <em>Evaluating a Peer-Led Body Project Intervention for Increasing Body Esteem and Reducing Thin-Ideal Internalisation among UK University Women relative to a waitlist control group</em></li>
+        <li>Activities: College hockey and netball, Volunteering Society, Psychology Society and Durham Women In Business Society</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>A Levels</h3>
+      <p class="meta">Reading Blue Coat School &nbsp;<span class="date">2021 – 2023</span></p>
+      <ul>
+        <li>Grades: Psychology (A*), Business (A*), Geography (A*), EPQ (A)</li>
+        <li>Academic Scholar: awarded for consistent academic excellence throughout secondary education</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>IGCSE</h3>
+      <p class="meta">British School of Brussels &nbsp;<span class="date">2018 – 2020</span></p>
+      <ul>
+        <li>6 × Grade 9: Double Science, Geography, History, French and Food and Nutrition</li>
+        <li>2 × Grade 8: Maths, English Literature</li>
+        <li>2 × Grade 7: Computer Science, English Language</li>
+      </ul>
+    </div>
+
+    <h4>Experience</h4>
+
+    <div class="item">
+      <h3>HR Hackathon</h3>
+      <p class="meta">Metivo (BASF Group) &nbsp;<span class="date">10/2026</span></p>
+      <ul>
+        <li>Worked in a team of 7 to develop a consultancy-style solution to a real HR challenge: integrating AI to reduce costs and improve talent outcomes</li>
+        <li>Analysed data and industry benchmarks to build the business case and quantify potential savings</li>
+        <li>Presented recommendations to a Metivo panel, focusing on the change management risks of AI implementation, including employee adoption and trust</li>
+        <li>Received highly positive feedback from the panel</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Simulated Consultancy Project</h3>
+      <p class="meta">Gen AI Academy &nbsp;<span class="date">10/2026</span></p>
+      <ul>
+        <li>Worked in a team of 5 to redesign the candidate selection stage of a company’s recruitment cycle, aiming to improve retention rates</li>
+        <li>Analysed company data to identify where selection was failing to predict long-term retention, and designed 3 artefacts to simplify and improve the process</li>
+        <li>Presented recommendations to the company CEO</li>
+        <li><strong>Awarded first place</strong></li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Business Administration and Management Volunteer</h3>
+      <p class="meta">NEPACS (Independent Visitors Scheme) &nbsp;<span class="date">10/2025 – 07/2026</span></p>
+      <ul>
+        <li>Calculated and tracked expenses from the independent volunteers and input data into spreadsheets</li>
+        <li>Ensured budgets aligned with spending and implemented interventions where unclear</li>
+        <li>Organised monthly calls with both the children and independent visitors to obtain feedback on their visits</li>
+        <li>Contributed to monthly and quarterly papers to the council on spending and on the charitable work being done</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>P&amp;G Insight Week</h3>
+      <p class="meta">P&amp;G &nbsp;<span class="date">06/2026</span></p>
+      <ul>
+        <li>Gained broad exposure to the FMCG industry and P&amp;G’s commercial functions, with a particular focus on Sales and how customer relationships, category insights and commercial strategy support business growth</li>
+        <li>Developed an understanding of how Sales works cross-functionally with areas such as Marketing, Finance and Supply Chain, and how P&amp;G uses consumer and market insight to make commercial decisions and respond to changing industry trends</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>People Team and Behavioural Health Intern</h3>
+      <p class="meta">UnitedHealth Group (Optum) &nbsp;<span class="date">07/2025 – 08/2025</span></p>
+      <ul>
+        <li>Completed training in diagnostic assessments, applying psychological theory to understand patient cases and enhance diagnostic accuracy</li>
+        <li>Shadowed the HR Early Careers/People Team at Optum HQ to observe recruitment cycles, leadership internships and employee wellbeing strategies, assisting in potential employee wellbeing strategies to increase satisfaction</li>
+        <li>Engaged with senior leadership across Optum and UnitedHealth Group through meetings and mentorship sessions, strengthening professional communication and strategic networking skills</li>
+        <li>Explored the connection between employee wellbeing, people development and healthcare delivery, recognising how organisational culture influences patient outcomes</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Financial Services Intern</h3>
+      <p class="meta">FDM Group &nbsp;<span class="date">07/2024</span></p>
+      <ul>
+        <li>Supported financial consultants and analysts by reviewing business performance data and client files, gaining exposure to consultancy practices and financial planning</li>
+        <li>Organised and led a presentation on sustainability practices, highlighting the role of environmental sustainability initiatives in corporate finance</li>
+        <li>Maintained accurate records and databases, ensuring data integrity and accessibility for relevant parties</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Clinical Psychology Shadowing</h3>
+      <p class="meta">University College London Hospital &nbsp;<span class="date">11/2022 – 01/2023</span></p>
+      <ul>
+        <li>Observed clinical practices and team discussions within the psychology department, gaining insight into mental health interventions and assessment approaches</li>
+        <li>Organised independent meetings with professionals across psychiatry, counselling and health psychology</li>
+        <li>Learnt how multidisciplinary teams collaborate to deliver integrated care, strengthening teamwork, observation and documentation skills in a clinical environment</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <h3>Volunteer</h3>
+      <p class="meta">Thames Valley Hospice Charity Shop &nbsp;<span class="date">03/2021 – 05/2021</span></p>
+      <ul>
+        <li>Provided customer service in a fast-paced retail environment, ensuring that every individual received a positive shopping experience</li>
+        <li>Organised inventory, managed donations and processed sales, contributing to the store’s operational efficiency alongside revenue generation for the charity</li>
+        <li>Collaborated with other volunteers and managers to maximise sales and community engagement</li>
+      </ul>
+    </div>
+
+    <h4>Skills</h4>
+    <p><span class="placeholder">[PLACEHOLDER: skills from cv.txt]</span></p>
+
+    <p class="note">CV download coming soon</p>
+  </div>
+</section>
+
+<!-- 4) Data Visualisation Portfolio -->
+<section id="portfolio">
+  <div class="wrap">
+    <h2>Data Visualisation Portfolio</h2>
+    <div class="cards">
+
+      <article class="card">
+        <h3><span class="placeholder">[PLACEHOLDER: Chart 1 title]</span></h3>
+        <p><span class="label">Question it answers:</span> <span class="placeholder">[PLACEHOLDER: one line]</span></p>
+        <p><span class="label">Data source:</span> <span class="placeholder">[PLACEHOLDER: target A (The Economist, Big Mac index) or target C (Open-Meteo)]</span></p>
+        <img src="images/charts1.png" alt="[PLACEHOLDER: one sentence saying what the chart shows]" style="max-width:100%;height:auto">
+        <p><span class="label">What to notice:</span> <span class="placeholder">[PLACEHOLDER: one sentence]</span></p>
+        <p class="small"><span class="placeholder">[PLACEHOLDER: credit line for target A or C, from section 3 of the student guide]</span></p>
+        <p class="small"><span class="placeholder">[PLACEHOLDER: “copy of a course chart” label for target A or C, from section 3 of the student guide]</span></p>
+      </article>
+
+      <article class="card">
+        <h3><span class="placeholder">[PLACEHOLDER: project 2 title]</span></h3>
+        <div class="coming">Chart coming soon</div>
+      </article>
+
+      <article class="card">
+        <h3><span class="placeholder">[PLACEHOLDER: project 3 title]</span></h3>
+        <div class="coming">Chart coming soon</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5) Contact -->
+<section id="contact">
+  <div class="wrap">
+    <h2>Contact</h2>
+    <p>LinkedIn: <span class="placeholder">[PLACEHOLDER: LinkedIn link from links.txt]</span></p>
+  </div>
+</section>
+
+</main>
+
+<!-- 6) Footer -->
+<footer>
+  <div class="wrap">
+    <p>© 2026 Emma Connor</p>
+    <p>Built with the help of generative AI; content and decisions are my own.</p>
+  </div>
+</footer>
+
+</body>
+</html>
