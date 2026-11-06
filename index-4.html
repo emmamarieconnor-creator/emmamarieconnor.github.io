@@ -1,0 +1,478 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Emma Connor</title>
+<meta name="description" content="Emma Connor: Psychology graduate (First Class Honours, Durham) studying an MSc in People Analytics and Human-Centric Management at UCL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1b2f5e;
+    --navy-deep: #13224a;
+    --sky: #dcecfb;
+    --sky-mid: #b9d8f4;
+    --lilac: #a98fd9;
+    --lilac-soft: #efe8fa;
+    --lilac-text: #553a86;
+    --text: #1f2933;
+    --muted: #4a5668;
+    --line: #e3e8f2;
+    --bg: #fbfbfe;
+    --radius: 18px;
+    --shadow: 0 10px 30px rgba(27, 47, 94, 0.08);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+  }
+  h1, h2, h3 { font-family: "Fraunces", Georgia, serif; color: var(--navy); line-height: 1.2; }
+  a { color: var(--navy); text-decoration: underline; text-decoration-color: var(--lilac); text-decoration-thickness: 2px; text-underline-offset: 4px; }
+  a:hover, a:focus { color: var(--lilac-text); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+  .eyebrow {
+    display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: var(--lilac-text); margin-bottom: 10px;
+  }
+
+  /* Menu */
+  nav {
+    position: sticky; top: 0; z-index: 20;
+    background: rgba(251, 251, 254, 0.85);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; padding-bottom: 14px; flex-wrap: wrap; }
+  nav .brand { font-family: "Fraunces", Georgia, serif; font-weight: 700; font-size: 1.15rem; color: var(--navy); text-decoration: none; }
+  nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 22px; flex-wrap: wrap; }
+  nav ul a { font-weight: 600; font-size: 16px; }
+
+  /* Hero */
+  header.hero {
+    position: relative; overflow: hidden;
+    background: linear-gradient(135deg, var(--sky) 0%, #e9e4fa 60%, var(--lilac-soft) 100%);
+    padding: 80px 0 90px;
+  }
+  .blob { position: absolute; border-radius: 50%; filter: blur(2px); opacity: 0.55; pointer-events: none; }
+  .blob.one { width: 380px; height: 380px; background: var(--sky-mid); top: -120px; right: -80px; }
+  .blob.two { width: 260px; height: 260px; background: #d6c8f2; bottom: -110px; left: -60px; }
+  .hero .wrap { position: relative; display: grid; grid-template-columns: 1.4fr 1fr; gap: 48px; align-items: center; }
+  .hero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); margin: 0 0 14px; color: var(--navy-deep); }
+  .hero .lead { font-size: 1.2rem; color: var(--navy); margin: 0 0 22px; max-width: 34ch; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0; list-style: none; }
+  .chips li {
+    background: rgba(255,255,255,0.75); border: 1px solid rgba(27,47,94,0.12);
+    padding: 6px 14px; border-radius: 999px; font-size: 0.92rem; font-weight: 600; color: var(--navy);
+  }
+  .portrait-frame { justify-self: center; position: relative; }
+  .portrait-frame::before {
+    content: ""; position: absolute; inset: -14px; border-radius: 50%;
+    border: 2px dashed var(--lilac);
+  }
+  .portrait {
+    display: block; width: 280px; height: 280px; max-width: 70vw; max-height: 70vw;
+    border-radius: 50%; object-fit: cover; background: #fff;
+    border: 8px solid #fff; box-shadow: var(--shadow);
+  }
+
+  /* Sections */
+  section { padding: 88px 0; }
+  .section-head { max-width: 640px; margin-bottom: 40px; }
+  .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 0 0 12px; }
+  .section-head p { color: var(--muted); margin: 0; }
+
+  /* About */
+  .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; align-items: start; }
+  .about-text p { font-size: 1.12rem; margin: 0 0 18px; }
+  .about-text p:first-child::first-letter {
+    font-family: "Fraunces", Georgia, serif; float: left; font-size: 3.6rem; line-height: 0.9;
+    padding: 6px 10px 0 0; color: var(--lilac-text);
+  }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .stat {
+    background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 18px; box-shadow: var(--shadow);
+  }
+  .stat .num { font-family: "Fraunces", Georgia, serif; font-size: 2rem; font-weight: 700; color: var(--navy); line-height: 1.1; }
+  .stat .what { font-size: 0.92rem; color: var(--muted); line-height: 1.45; margin-top: 6px; }
+  .stat.accent { background: var(--navy); border-color: var(--navy); }
+  .stat.accent .num { color: #fff; }
+  .stat.accent .what { color: #d9e3f5; }
+
+  /* Themes */
+  .alt { background: linear-gradient(180deg, #fff 0%, var(--sky) 100%); }
+  .themes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .theme {
+    background: #fff; border-radius: var(--radius); padding: 28px; box-shadow: var(--shadow);
+    border: 1px solid var(--line); position: relative;
+  }
+  .theme .tag {
+    display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.82rem;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--lilac-text);
+    background: var(--lilac-soft); padding: 4px 12px; border-radius: 999px;
+  }
+  .theme h3 { font-size: 1.45rem; margin: 14px 0 16px; }
+  .moment { padding: 14px 0; border-top: 1px solid var(--line); }
+  .moment:first-of-type { border-top: 0; padding-top: 0; }
+  .moment .where { font-weight: 700; color: var(--navy); }
+  .moment .when { font-size: 0.85rem; color: var(--muted); margin-left: 6px; white-space: nowrap; }
+  .moment p { margin: 4px 0 0; font-size: 0.98rem; }
+  .win {
+    display: inline-block; margin-top: 6px; font-size: 0.82rem; font-weight: 700;
+    background: var(--navy); color: #fff; padding: 2px 10px; border-radius: 999px;
+  }
+
+  /* Spotlight */
+  .spotlight {
+    background: var(--navy); color: #e8eefa; border-radius: 28px; padding: 52px;
+    display: grid; grid-template-columns: auto 1fr; gap: 40px; align-items: center; position: relative; overflow: hidden;
+  }
+  .spotlight::after {
+    content: ""; position: absolute; width: 320px; height: 320px; border-radius: 50%;
+    background: rgba(169, 143, 217, 0.25); right: -100px; top: -120px;
+  }
+  .spotlight .eyebrow { color: #cbbcf0; }
+  .spotlight .score {
+    font-family: "Fraunces", Georgia, serif; font-size: 5rem; font-weight: 700; color: #fff; line-height: 1;
+    width: 170px; height: 170px; border-radius: 50%; border: 3px solid var(--lilac);
+    display: flex; align-items: center; justify-content: center; position: relative; z-index: 1;
+  }
+  .spotlight h3 { color: #fff; font-size: 1.6rem; margin: 0 0 12px; position: relative; z-index: 1; }
+  .spotlight p { margin: 0; position: relative; z-index: 1; }
+
+  /* Journey */
+  .journey { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; position: relative; }
+  .journey::before {
+    content: ""; position: absolute; top: 15px; left: 6%; right: 6%; height: 3px;
+    background: linear-gradient(90deg, var(--sky-mid), var(--lilac));
+  }
+  .stop { position: relative; padding-top: 44px; }
+  .stop::before {
+    content: ""; position: absolute; top: 4px; left: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: #fff; border: 4px solid var(--lilac);
+  }
+  .stop.now::before { background: var(--navy); border-color: var(--navy); }
+  .stop .yrs { font-size: 0.85rem; font-weight: 700; color: var(--lilac-text); }
+  .stop h3 { font-size: 1.15rem; margin: 4px 0 6px; }
+  .stop .place { font-weight: 600; color: var(--navy); font-size: 0.95rem; }
+  .stop p { font-size: 0.93rem; color: var(--muted); margin: 6px 0 0; line-height: 1.55; }
+  .now-label { display: inline-block; margin-left: 6px; font-size: 0.72rem; font-weight: 700; background: var(--navy); color: #fff; padding: 1px 8px; border-radius: 999px; vertical-align: middle; }
+
+  /* Portfolio */
+  .cards { display: grid; grid-template-columns: 2fr 1fr; gap: 24px; }
+  .side-cards { display: grid; gap: 24px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 24px; box-shadow: var(--shadow); }
+  .card h3 { font-size: 1.3rem; margin: 0 0 10px; }
+  .card p { margin: 8px 0; font-size: 0.97rem; }
+  .card .label { font-weight: 700; color: var(--navy); }
+  .card img { display: block; margin: 16px 0; border-radius: 12px; border: 1px solid var(--line); }
+  .coming {
+    display: flex; align-items: center; justify-content: center; min-height: 140px; text-align: center;
+    background: repeating-linear-gradient(45deg, var(--sky), var(--sky) 12px, #e6f0fc 12px, #e6f0fc 24px);
+    border-radius: 12px; font-weight: 700; color: var(--navy);
+  }
+  .small { font-size: 0.88rem; color: var(--muted); }
+
+  /* Beyond */
+  .beyond { display: flex; flex-wrap: wrap; gap: 12px; list-style: none; padding: 0; margin: 0; }
+  .beyond li {
+    background: #fff; border: 2px solid var(--sky-mid); color: var(--navy);
+    padding: 10px 18px; border-radius: 999px; font-weight: 600;
+  }
+  .beyond li:nth-child(even) { border-color: #d6c8f2; }
+
+  /* Contact */
+  .contact {
+    text-align: center; background: linear-gradient(135deg, var(--sky), var(--lilac-soft));
+    border-radius: 28px; padding: 60px 24px;
+  }
+  .contact h2 { font-size: clamp(1.9rem, 4vw, 2.6rem); margin: 0 0 12px; }
+  .contact p { margin: 8px 0; }
+
+  .placeholder {
+    background: var(--lilac-soft); border: 1px dashed var(--lilac);
+    color: var(--lilac-text); padding: 1px 6px; border-radius: 4px; font-weight: 600;
+  }
+
+  footer { background: var(--navy-deep); color: #d9e3f5; padding: 34px 0; margin-top: 88px; font-size: 0.95rem; }
+  footer .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  footer p { margin: 0; }
+
+  @media (max-width: 860px) {
+    .hero .wrap, .about-grid, .cards { grid-template-columns: 1fr; }
+    .portrait-frame { order: -1; }
+    .themes { grid-template-columns: 1fr; }
+    .journey { grid-template-columns: 1fr 1fr; row-gap: 34px; }
+    .journey::before { display: none; }
+    .spotlight { grid-template-columns: 1fr; padding: 36px 26px; }
+  }
+  @media (max-width: 540px) {
+    body { font-size: 16px; }
+    .wrap { padding: 0 16px; }
+    header.hero { padding: 48px 0 60px; }
+    section { padding: 60px 0; }
+    nav .brand { display: none; }
+    .journey { grid-template-columns: 1fr; }
+    .stats { grid-template-columns: 1fr 1fr; }
+    .portrait { width: 220px; height: 220px; }
+    .spotlight .score { width: 130px; height: 130px; font-size: 3.6rem; }
+    .theme { padding: 22px; }
+  }
+</style>
+</head>
+<body>
+
+<nav aria-label="Main menu">
+  <div class="wrap">
+    <a class="brand" href="#top">Emma Connor</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <span class="blob one" aria-hidden="true"></span>
+  <span class="blob two" aria-hidden="true"></span>
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Psychology × People Analytics</span>
+      <h1>Emma Connor</h1>
+      <p class="lead">Psychology graduate with First Class Honours from Durham, now studying People Analytics and Human-Centric Management at UCL.</p>
+      <ul class="chips" aria-label="Highlights">
+        <li>BSc Psychology, First Class</li>
+        <li>MSc at UCL, 2026 – 2027</li>
+        <li>1st place, Gen AI Academy</li>
+      </ul>
+    </div>
+    <div class="portrait-frame">
+      <img class="portrait" src="profile.jpg" alt="Portrait of Emma Connor">
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head">
+        <span class="eyebrow">About</span>
+        <h2>From psychology to people</h2>
+      </div>
+      <div class="about-text">
+        <p>After graduating from Durham University with First Class Honours in Psychology, I am now studying for an MSc in People Analytics and Human-Centric Management at University College London.</p>
+        <p>Along the way I have worked across HR, behavioural health, financial services, FMCG and the charity sector: from shadowing the People Team at Optum HQ, to analysing data for a hackathon business case, to winning first place for redesigning a company’s candidate selection process.</p>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat accent"><div class="num">1st</div><div class="what">First Class Honours, BSc Psychology, Durham</div></div>
+      <div class="stat"><div class="num">1st</div><div class="what">Place in the Gen AI Academy consultancy project</div></div>
+      <div class="stat"><div class="num">3 A*</div><div class="what">A Levels in Psychology, Business and Geography, plus an A in the EPQ</div></div>
+      <div class="stat"><div class="num">72%</div><div class="what">Dissertation on a peer-led body-image intervention</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Work</span>
+      <h2>Where I’ve been learning</h2>
+      <p>Four threads run through my experience.</p>
+    </div>
+
+    <div class="themes">
+
+      <article class="theme">
+        <span class="tag">01 · People &amp; HR</span>
+        <h3>Making organisations work for people</h3>
+        <div class="moment">
+          <span class="where">Metivo (BASF Group) HR Hackathon</span><span class="when">10/2026</span>
+          <p>In a team of 7, built the business case for integrating AI into HR to reduce costs and improve talent outcomes, then presented the change-management risks, including employee adoption and trust, to a Metivo panel.</p>
+          <span class="win">Highly positive panel feedback</span>
+        </div>
+        <div class="moment">
+          <span class="where">Gen AI Academy: Simulated Consultancy</span><span class="when">10/2026</span>
+          <p>In a team of 5, found where a company’s candidate selection was failing to predict long-term retention, designed 3 artefacts to improve the process and presented them to the CEO.</p>
+          <span class="win">Awarded first place</span>
+        </div>
+        <div class="moment">
+          <span class="where">UnitedHealth Group (Optum): People Team</span><span class="when">07/2025 – 08/2025</span>
+          <p>Shadowed the HR Early Careers/People Team at Optum HQ across recruitment cycles, leadership internships and employee wellbeing strategies.</p>
+        </div>
+      </article>
+
+      <article class="theme">
+        <span class="tag">02 · Health &amp; behaviour</span>
+        <h3>Psychology in practice</h3>
+        <div class="moment">
+          <span class="where">UnitedHealth Group (Optum): Behavioural Health</span><span class="when">07/2025 – 08/2025</span>
+          <p>Trained in diagnostic assessments, applying psychological theory to patient cases, and explored how organisational culture influences patient outcomes.</p>
+        </div>
+        <div class="moment">
+          <span class="where">University College London Hospital</span><span class="when">11/2022 – 01/2023</span>
+          <p>Clinical psychology shadowing: observed the psychology department, organised meetings with professionals across psychiatry, counselling and health psychology, and saw how multidisciplinary teams deliver integrated care.</p>
+        </div>
+      </article>
+
+      <article class="theme">
+        <span class="tag">03 · Business</span>
+        <h3>The commercial side</h3>
+        <div class="moment">
+          <span class="where">P&amp;G Insight Week</span><span class="when">06/2026</span>
+          <p>Broad exposure to FMCG and P&amp;G’s commercial functions, with a focus on Sales and how it works with Marketing, Finance and Supply Chain.</p>
+        </div>
+        <div class="moment">
+          <span class="where">FDM Group: Financial Services Intern</span><span class="when">07/2024</span>
+          <p>Reviewed business performance data and client files for consultants and analysts, and organised and led a presentation on sustainability in corporate finance.</p>
+        </div>
+      </article>
+
+      <article class="theme">
+        <span class="tag">04 · Community</span>
+        <h3>Giving time</h3>
+        <div class="moment">
+          <span class="where">NEPACS (Independent Visitors Scheme)</span><span class="when">10/2025 – 07/2026</span>
+          <p>Business administration and management volunteer: tracked expenses and budgets, organised monthly feedback calls with children and independent visitors, and contributed to papers to the council.</p>
+        </div>
+        <div class="moment">
+          <span class="where">Thames Valley Hospice Charity Shop</span><span class="when">03/2021 – 05/2021</span>
+          <p>Served customers, managed donations and processed sales to raise revenue for the charity.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="research-title">
+  <div class="wrap">
+    <div class="spotlight">
+      <div class="score" aria-hidden="true">72</div>
+      <div>
+        <span class="eyebrow">Research spotlight · Dissertation, 72%</span>
+        <h3 id="research-title">Evaluating a peer-led Body Project intervention</h3>
+        <p>My Durham dissertation evaluated a peer-led Body Project intervention for increasing body esteem and reducing thin-ideal internalisation among UK university women, compared with a waitlist control group.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="journey-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Education</span>
+      <h2 id="journey-title">Brussels to London</h2>
+    </div>
+    <ol class="journey">
+      <li class="stop">
+        <span class="yrs">2018 – 2020</span>
+        <h3>IGCSE</h3>
+        <span class="place">British School of Brussels</span>
+        <p>6 × Grade 9, 2 × Grade 8 and 2 × Grade 7</p>
+      </li>
+      <li class="stop">
+        <span class="yrs">2021 – 2023</span>
+        <h3>A Levels</h3>
+        <span class="place">Reading Blue Coat School</span>
+        <p>A* in Psychology, Business and Geography, and an A in the EPQ. Academic Scholar.</p>
+      </li>
+      <li class="stop">
+        <span class="yrs">2023 – 2026</span>
+        <h3>BSc Psychology</h3>
+        <span class="place">Durham University</span>
+        <p><strong>First Class Honours.</strong> College hockey and netball, plus the Volunteering, Psychology and Women In Business societies.</p>
+      </li>
+      <li class="stop now">
+        <span class="yrs">2026 – 2027 <span class="now-label">Now</span></span>
+        <h3>MSc People Analytics &amp; Human-Centric Management</h3>
+        <span class="place">University College London</span>
+        <p>Distinction predicted. UCL Netball Society.</p>
+      </li>
+    </ol>
+    <p class="small" style="margin-top:34px">CV download coming soon</p>
+  </div>
+</section>
+
+<section id="portfolio" class="alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Portfolio</span>
+      <h2>Data visualisation</h2>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <h3><span class="placeholder">[PLACEHOLDER: Chart 1 title]</span></h3>
+        <p><span class="label">Question it answers:</span> <span class="placeholder">[PLACEHOLDER: one line]</span></p>
+        <img src="images/charts1.png" alt="[PLACEHOLDER: one sentence saying what the chart shows]" style="max-width:100%;height:auto">
+        <p><span class="label">What to notice:</span> <span class="placeholder">[PLACEHOLDER: one sentence]</span></p>
+        <p class="small"><span class="label">Data source:</span> <span class="placeholder">[PLACEHOLDER: credit line for target A or C]</span></p>
+        <p class="small"><span class="placeholder">[PLACEHOLDER: “copy of a course chart” label for target A or C]</span></p>
+      </article>
+      <div class="side-cards">
+        <article class="card">
+          <h3>Project 2</h3>
+          <div class="coming">Chart coming soon</div>
+        </article>
+        <article class="card">
+          <h3>Project 3</h3>
+          <div class="coming">Chart coming soon</div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="beyond-title">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Beyond the desk</span>
+      <h2 id="beyond-title">Clubs and societies</h2>
+    </div>
+    <ul class="beyond">
+      <li>UCL Netball Society</li>
+      <li>College hockey</li>
+      <li>College netball</li>
+      <li>Durham Volunteering Society</li>
+      <li>Durham Psychology Society</li>
+      <li>Durham Women In Business Society</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="contact">
+      <span class="eyebrow">Contact</span>
+      <h2>Let’s connect</h2>
+      <p>LinkedIn: <span class="placeholder">[PLACEHOLDER: LinkedIn link from links.txt]</span></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Emma Connor</p>
+    <p>Built with the help of generative AI; content and decisions are my own.</p>
+  </div>
+</footer>
+
+</body>
+</html>
+
+</body></html>
